@@ -1,7 +1,7 @@
 {
   "name": "bookmaker",
   "main": "index.js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/sielay/bookmaker",
   "authors": [
     "Lukasz Sielski <lukaszsielski@gmail.com>"

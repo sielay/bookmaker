@@ -68,8 +68,21 @@ winEachWaySingle(decimal:Number, placeOdds:Number, moneyWin:Number, moneyPlace:N
 winEachWaySingle(any:String, placeOdds:Number, moneyWin:Number, moneyPlace:Number): Number
 
 ### winEachWaySingleDetailed
+See `test.js`
+
 ### winAccumulator
-winEachWaySingle(moneyWin:Number, moneyPlace:Number, [decimal:Number, placeOdds:Number], ...): Number
+winEachWaySingle(moneyWin:Number, moneyPlace:Number, [decimal:Number, placeOdds:Number], ...): 
+Number
+
+### oddsEachWaySingle
+oddsEachWaySingle(winOdds:Any, placeOdds:Any):Object - see `test.js`
+
+### combineOddsEachWay
+combineOddsEachWAy(list:Array): Object - see `test.js`
+
+### combineOdds
+combineOdds(list:array): Number - see `test.js`
+
 
 ### parse
 parse(any:String) : Number - decimal

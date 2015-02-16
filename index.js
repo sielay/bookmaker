@@ -34,7 +34,11 @@
     Odds.winEachWaySingle = winEachWaySingle;
     Odds.winEachWaySingleDetailed = winEachWaySingleDetailed;
     Odds.winAccumulator = winAccumulator;
+
     Odds.parse = parse;
+    Odds.oddsEachWaySingle = oddsEachWaySingle;
+    Odds.combinedOddsEachWay = combinedOddsEachWay;
+    Odds.combineOdds = combineOdds;
 
     function americanToPercent(american) {
         return +(1 / _americanToDecimal(american)).toFixed(2);
@@ -135,7 +139,7 @@
     function oddsEachWaySingle ( oddsWin, oddsPlace ) {
         var odds = parse( oddsWin );
         var oddsFranctionised = odds - 1;
-        var oddsPlace = (oddsFranctionised * oddsPlace) + 1;
+        var oddsPlace = (oddsFranctionised * parse(oddsPlace)) + 1;
         return {
             oddsWin   : odds,
             oddsPlace : oddsPlace
@@ -163,6 +167,15 @@
             win   : win,
             place : place
         };
+    }
+
+    function combineOdds(list) {
+        var result = 1;
+        list.forEach( function ( any ) {
+            var odds = parse( any );
+            result *= odds;
+        } );
+        return result;
     }
 
     function winAccumulator () {

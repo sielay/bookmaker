@@ -92,21 +92,49 @@ describe( 'Conversion function', function () {
         } );
 
     } );
+} );
 
-    it( 'Wins', function () {
+describe( 'Operations', function () {
+
+    it( 'WinSingle', function () {
         Odds.winSingle( Odds.fractionToDecimal( 9, 2 ), 100 ).should.eql( 550 );
-
         Odds.winSingle( '9/2', 100 ).should.eql( 550 );
+    } );
 
+    it('OddsEachWAy', function() {
+        var odds = Odds.oddsEachWaySingle('11/4',0.2 );
+        odds.oddsWin.should.eql(3.75);
+        odds.oddsPlace.should.eql(1.55);
+
+        var odds = Odds.oddsEachWaySingle('11/4','1:5' );
+        odds.oddsWin.should.eql(3.75);
+        odds.oddsPlace.should.eql(1.55);
+    });
+
+    it( 'WinEachWaySingle', function () {
         Odds.winEachWaySingle(
             '11/4',
             0.2,
             100,
             100
         ).should.eql( 530 );
+    } );
 
+    it('CombinedOddsEachWay', function() {
+        var odds = Odds.combinedOddsEachWay([[ '1/1', '1:4' ], [ '11/8', '1:5' ], [ '5/4', '1:4' ], [ '1/2', '1' ], [ '3/1', '1:5' ]] );
+        odds.win.should.approximately(64.25,0.02);
+        odds.place.should.approximately(5.024,0.02);
+    });
+
+    it('CombineOdds', function() {
+        Odds.combineOdds(['1/1','11/8','5/4','1/2','3/1']).should.approximately(64.25,0.02);
+    });
+
+    it( 'WinAccumulator', function () {
         Odds.winAccumulator( 100, 100, [ '1/1', '1:4' ], [ '11/8', '1:5' ], [ '5/4', '1:4' ], [ '1/2', '1' ], [ '3/1', '1:5' ] ).should.eql( 6928.42 )
 
     } );
 } );
+
+
 

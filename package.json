@@ -1,6 +1,6 @@
 {
   "name": "bookmakerjs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Library to manage and calculate odds",
   "main": "index.js",
   "scripts": {
