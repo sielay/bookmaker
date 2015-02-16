@@ -1,0 +1,35 @@
+{
+  "name": "bookmakerjs",
+  "version": "0.0.1",
+  "description": "Library to manage and calculate odds",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sielay/bookmaker.git"
+  },
+  "keywords": [
+    "odds",
+    "bookmaking",
+    "bookmaker",
+    "gambling"
+  ],
+  "author": "lukaszsielski@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sielay/bookmaker/issues"
+  },
+  "homepage": "https://github.com/sielay/bookmaker",
+  "devDependencies": {
+    "chalk": "^0.5.1",
+    "gulp": "^3.8.11",
+    "gulp-gzip": "0.0.8",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.1.0",
+    "mocha": "^2.1.0",
+    "mocha-clean": "^0.4.0",
+    "should": "^5.0.0"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "bookmaker",
+  "main": "index.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sielay/bookmaker",
+  "authors": [
+    "Lukasz Sielski <lukaszsielski@gmail.com>"
+  ],
+  "description": "Library to manage and calculate odds",
+  "keywords": [
+    "odds",
+    "bookmaking",
+    "bookmaker",
+    "gambling"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
