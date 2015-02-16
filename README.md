@@ -9,7 +9,7 @@ bower install bookmaker --save
 ```
 
 ```
-npm install bookmaker --save
+npm install bookmakerjs --save
 ```
 
 You have at the moment series of methods and you can view their use in `test.js`.
